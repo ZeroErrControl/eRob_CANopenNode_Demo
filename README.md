@@ -20,7 +20,7 @@ This is version 4 of CANopenNode with new Object Dictionary implementation. For 
 ```bash
 # Clone the repository
 git clone https://github.com/ZeroErrControl/eRob_CANopenNode_Demo.git
-cd CANopenNode
+cd eRob_CANopenNode_Demo
 
 # Create build directory and configure
 mkdir build && cd build
