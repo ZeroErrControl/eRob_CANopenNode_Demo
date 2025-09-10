@@ -1,0 +1,149 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-canopennode",
+            "type": "shell",
+            "command": "make",
+            "args": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "使用CMake构建CANopenNode项目"
+        },
+        {
+            "label": "cmake-configure",
+            "type": "shell",
+            "command": "cmake",
+            "args": [".."],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "problemMatcher": [],
+            "detail": "配置CMake项目"
+        },
+        {
+            "label": "clean-build",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "problemMatcher": [],
+            "detail": "清理构建文件"
+        },
+        {
+            "label": "run-quick-scan",
+            "type": "shell",
+            "command": "./bin/quick_scan",
+            "args": [],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "problemMatcher": [],
+            "detail": "运行快速扫描程序"
+        },
+        {
+            "label": "run-quick-scan-read",
+            "type": "shell",
+            "command": "./bin/quick_scan",
+            "args": ["read", "2"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "problemMatcher": [],
+            "detail": "运行快速扫描程序读取节点2"
+        },
+        {
+            "label": "build-pp-mode-control",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o",
+                "pp_mode_control",
+                "pp_mode_control.c",
+                "-Wall",
+                "-Wextra",
+                "-g"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "编译PP模式控制程序"
+        },
+        {
+            "label": "run-pp-mode-control",
+            "type": "shell",
+            "command": "sudo",
+            "args": ["./pp_mode_control"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "detail": "运行PP模式控制程序"
+        }
+    ]
+}

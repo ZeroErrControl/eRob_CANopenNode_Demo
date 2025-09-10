@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cmake-tools",
+        "ms-vscode.makefile-tools",
+        "twxs.cmake",
+        "ms-vscode.hexeditor",
+        "ms-vscode.vscode-json",
+        "redhat.vscode-yaml",
+        "ms-vscode.vscode-markdown"
+    ]
+}
+

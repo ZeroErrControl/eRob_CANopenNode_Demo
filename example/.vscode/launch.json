@@ -1,0 +1,115 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug CANopenNode Blank",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/canopennode_blank",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-canopennode",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Debug Quick Scan",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/quick_scan",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-canopennode",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Debug Quick Scan (Read Node 2)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/quick_scan",
+            "args": ["read", "2"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-canopennode",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Debug PP Mode Control",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/pp_mode_control",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-pp-mode-control",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Debug PP Mode Control (with sudo)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "sudo",
+            "args": ["./pp_mode_control"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-pp-mode-control",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}

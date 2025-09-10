@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../301",
+                "${workspaceFolder}/../303",
+                "${workspaceFolder}/../304",
+                "${workspaceFolder}/../305",
+                "${workspaceFolder}/../309",
+                "${workspaceFolder}/../extra",
+                "${workspaceFolder}/../storage"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c99",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
+
